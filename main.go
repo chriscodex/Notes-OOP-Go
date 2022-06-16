@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 // Struct (Equivalent to classes)
+// Struct Employee
 type Employee struct {
 	id       int
 	name     string
@@ -35,8 +36,9 @@ func (e *Employee) GetName() string {
 	return e.name
 }
 
-// Functions to test
-func TestConstructor() {
+// Test Functions
+// Constructor Test
+func ConstructorTest() {
 	// Way 1
 	e := NewEmployee(1, "Employee 1", true)
 	fmt.Printf("%v\n", *e)
@@ -56,10 +58,5 @@ func TestConstructor() {
 }
 
 func main() {
-	e := Employee{}
-	fmt.Println(e)
-	e.id = 1
-	e.name = "name"
-	fmt.Println(e)
-	TestConstructor()
+	ConstructorTest()
 }
