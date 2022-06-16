@@ -4,8 +4,18 @@ import "fmt"
 
 // Struct (Equivalent to classes)
 type Employee struct {
-	id   int
-	name string
+	id       int
+	name     string
+	vacation bool
+}
+
+// Constructor
+func NewEmployee(id int, name string, vacation bool) *Employee {
+	return &Employee{
+		id:       id,
+		name:     name,
+		vacation: vacation,
+	}
 }
 
 // Receiver Function (Equivalent to methods)
