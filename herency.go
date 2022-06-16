@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 // Structs
 type Person struct {
 	name string
@@ -17,6 +19,15 @@ type Teacher struct {
 	Profession
 }
 
-func main() {
+// Test Functions
+func testNewTeacher(id int, name string, age int) {
+	t := Teacher{}
+	t.id = id
+	t.name = name
+	t.age = age
+	fmt.Printf("%v\n", t)
+}
 
+func main() {
+	testNewTeacher(1, "Christian", 24)
 }
