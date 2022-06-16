@@ -37,8 +37,22 @@ func (e *Employee) GetName() string {
 
 // Functions to test
 func TestConstructor() {
+	// Way 1
 	e := NewEmployee(1, "Employee 1", true)
-	fmt.Printf("%v", *e)
+	fmt.Printf("%v\n", *e)
+	// Way 2
+	e2 := new(Employee)
+	e2.id = 2
+	e2.name = "Employee 2"
+	e2.vacation = true
+	fmt.Printf("%v\n", *e2)
+	// Way 3
+	e3 := Employee{
+		id:       3,
+		name:     "Employee 3",
+		vacation: true,
+	}
+	fmt.Printf("%v\n", e3)
 }
 
 func main() {
