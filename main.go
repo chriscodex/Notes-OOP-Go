@@ -35,10 +35,17 @@ func (e *Employee) GetName() string {
 	return e.name
 }
 
+// Functions to test
+func TestConstructor() {
+	e := NewEmployee(1, "Employee 1", true)
+	fmt.Printf("%v", *e)
+}
+
 func main() {
 	e := Employee{}
 	fmt.Println(e)
 	e.id = 1
 	e.name = "name"
 	fmt.Println(e)
+	TestConstructor()
 }
