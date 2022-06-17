@@ -19,7 +19,7 @@ type Teacher struct {
 	Profession
 }
 
-// Test Functions
+// Function to create new teacher without pointers
 func NewTeacher(id int, name string, age int) {
 	t := Teacher{}
 	t.id = id
