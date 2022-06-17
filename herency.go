@@ -20,7 +20,7 @@ type Teacher struct {
 }
 
 // Test Functions
-func testNewTeacher(id int, name string, age int) {
+func NewTeacher(id int, name string, age int) {
 	t := Teacher{}
 	t.id = id
 	t.name = name
@@ -29,5 +29,5 @@ func testNewTeacher(id int, name string, age int) {
 }
 
 func main() {
-	testNewTeacher(1, "Christian", 24)
+	NewTeacher(1, "Christian", 24)
 }
