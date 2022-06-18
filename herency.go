@@ -44,15 +44,17 @@ func (TemporaryEmployee) getMessage() string {
 }
 
 // Function to create new teacher without pointers
-func NewFullTimeEmployee(id int, name string, age int, endDate string) {
+func NewFullTimeEmployee(id int, name string, age int, endDate string) *FullTimeEmployee {
 	t := FullTimeEmployee{}
 	t.id = id
 	t.name = name
 	t.age = age
 	t.endDate = endDate
 	fmt.Printf("%v\n", t)
+	return &t
 }
 
 func main() {
-	NewFullTimeEmployee(1, "Christian", 24, "25/12")
+	t := NewFullTimeEmployee(1, "Christian", 24, "25/12")
+	fmt.Println(*t)
 }
