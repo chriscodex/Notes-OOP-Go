@@ -21,7 +21,7 @@ type FullTimeEmployee struct {
 }
 
 // Struct Temporary inherits from Profession and Person
-type TemporaryEmployee struct {
+type PartTimeEmployee struct {
 	Person
 	Profession
 	taxRate int
@@ -32,18 +32,23 @@ type PrintInfo interface {
 	getMessage() string
 }
 
+// Method of interface
+func getMessage(p PrintInfo) {
+	fmt.Println(p.getMessage())
+}
+
 // Methods needed for interfaces
 // Method for FullTime
 func (FullTimeEmployee) getMessage() string {
-	return "This person works full time employee"
+	return "This employee works full time"
 }
 
 // Method for Temporary
-func (TemporaryEmployee) getMessage() string {
-	return "This person works temporary employee"
+func (PartTimeEmployee) getMessage() string {
+	return "This employee works part time"
 }
 
-// Function to create new teacher without pointers
+// Function to create new full time employee
 func NewFullTimeEmployee(id int, name string, age int, endDate string) *FullTimeEmployee {
 	t := FullTimeEmployee{}
 	t.id = id
@@ -54,7 +59,19 @@ func NewFullTimeEmployee(id int, name string, age int, endDate string) *FullTime
 	return &t
 }
 
+// Function to create new part time employee
+func NewPartTimeEmployee(id int, name string, age int, taxRate int) *PartTimeEmployee {
+	p := PartTimeEmployee{}
+	p.id = id
+	p.name = name
+	p.age = age
+	p.taxRate = taxRate
+	return &p
+}
+
 func main() {
 	t := NewFullTimeEmployee(1, "Christian", 24, "25/12")
-	fmt.Println(*t)
+	p := NewPartTimeEmployee(1, "Eduardo", 25, 5)
+	getMessage(t)
+	getMessage(p)
 }
