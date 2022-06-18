@@ -14,7 +14,7 @@ type IntSenderFactory interface {
 	GetSenderChannel() string
 }
 
-// Notifications
+// SMS Notifications
 type SMSNotification struct {
 }
 
@@ -26,7 +26,7 @@ func (SMSNotification) GetSender() IntSenderFactory {
 	return SMSNotificationSender{}
 }
 
-// SMSNotificationSender
+// SMS Notification Sender
 type SMSNotificationSender struct {
 }
 
@@ -36,4 +36,12 @@ func (SMSNotificationSender) GetSenderMethod() string {
 }
 func (SMSNotificationSender) GetSenderChannel() string {
 	return "Twilio"
+}
+
+// Email Notification
+type EmailNotification struct {
+}
+
+// Email Notification Sender
+type EmailNotificationSender struct {
 }
