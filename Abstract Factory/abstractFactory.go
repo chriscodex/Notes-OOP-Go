@@ -3,5 +3,11 @@ package main
 // Factory Notification
 type IntNotificationFactory interface {
 	SendNotification()
-	GetSender() ISender
+	GetSender() IntSender
+}
+
+// Factory Sender
+type IntSender interface {
+	GetSenderMethod() string
+	GetSenderChannel() string
 }
