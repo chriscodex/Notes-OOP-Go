@@ -13,8 +13,8 @@ type Profession struct {
 }
 
 // Herency
-// Struct FullTimeEmployee inherits from Employee and Person
-type Teacher struct {
+// Struct FullTime inherits from Proffesion and Person
+type FullTime struct {
 	Person
 	Profession
 }
