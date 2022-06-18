@@ -45,3 +45,11 @@ type EmailNotification struct {
 // Email Notification Sender
 type EmailNotificationSender struct {
 }
+
+// Methods of EmailNotificationSender
+func (EmailNotificationSender) GetSenderMethod() string {
+	return "Email"
+}
+func (EmailNotificationSender) GetSenderChannel() string {
+	return "Gmail"
+}
