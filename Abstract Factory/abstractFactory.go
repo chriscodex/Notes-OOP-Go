@@ -83,5 +83,11 @@ func getMethod(f IntNotificationFactory) {
 }
 
 func main() {
+	sms, _ := getNotificationFactory("SMS")
+	email, _ := getNotificationFactory("Email")
+	sendNotification(sms)
+	sendNotification(email)
 
+	getMethod(sms)
+	getMethod(email)
 }
