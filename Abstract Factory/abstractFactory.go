@@ -5,11 +5,11 @@ import "fmt"
 // Factory Notification
 type IntNotificationFactory interface {
 	SendNotification()
-	GetSender() IntSender
+	GetSender() IntSenderFactory
 }
 
 // Factory Sender
-type IntSender interface {
+type IntSenderFactory interface {
 	GetSenderMethod() string
 	GetSenderChannel() string
 }
@@ -22,7 +22,7 @@ type SMSNotification struct {
 func (SMSNotification) SendNotification() {
 	fmt.Println("Sending notification SMS")
 }
-func (SMSNotification) GetSender() IntSender {
+func (SMSNotification) GetSender() IntSenderFactory {
 	return SMSNotificationSender{}
 }
 
