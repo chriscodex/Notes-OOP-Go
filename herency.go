@@ -32,6 +32,17 @@ type PrintInfo interface {
 	getMessage() string
 }
 
+// Methods needed for interfaces
+// Method for FullTime
+func (FullTime) getMessage() string {
+	return "This person works full time"
+}
+
+// Method for Temporary
+func (Temporary) getMessage() string {
+	return "This person works temporary"
+}
+
 // Function to create new teacher without pointers
 func NewTeacher(id int, name string, age int) {
 	t := Teacher{}
