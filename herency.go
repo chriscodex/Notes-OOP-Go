@@ -27,6 +27,11 @@ type Temporary struct {
 	taxRate int
 }
 
+// Interfaces
+type PrintInfo interface {
+	getMessage() string
+}
+
 // Function to create new teacher without pointers
 func NewTeacher(id int, name string, age int) {
 	t := Teacher{}
