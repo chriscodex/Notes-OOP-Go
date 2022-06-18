@@ -13,10 +13,18 @@ type Profession struct {
 }
 
 // Herency
-// Struct FullTime inherits from Proffesion and Person
+// Struct FullTime inherits from Profession and Person
 type FullTime struct {
 	Person
 	Profession
+	endDate string
+}
+
+// Struct Temporary inherits from Profession and Person
+type Temporary struct {
+	Person
+	Profession
+	taxRate int
 }
 
 // Function to create new teacher without pointers
