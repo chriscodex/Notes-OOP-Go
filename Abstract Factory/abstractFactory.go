@@ -20,7 +20,7 @@ type SMSNotification struct {
 
 // Methods of SMSNotification
 func (SMSNotification) SendNotification() {
-	fmt.Println("Sending notification SMS")
+	fmt.Println("Sending Notification SMS")
 }
 func (SMSNotification) GetSender() IntSenderFactory {
 	return SMSNotificationSender{}
@@ -40,6 +40,14 @@ func (SMSNotificationSender) GetSenderChannel() string {
 
 // Email Notification
 type EmailNotification struct {
+}
+
+// Methods of Email Notification
+func (EmailNotification) SendNotification() {
+	fmt.Println("Sending Notification Email")
+}
+func (EmailNotification) GetSender() IntSenderFactory {
+	return EmailNotificationSender{}
 }
 
 // Email Notification Sender
