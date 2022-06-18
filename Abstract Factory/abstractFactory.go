@@ -22,6 +22,9 @@ type SMSNotification struct {
 func (SMSNotification) SendNotification() {
 	fmt.Println("Sending notification SMS")
 }
+func (SMSNotification) GetSender() IntSender {
+	return SMSNotificationSender{}
+}
 
 // SMSNotificationSender
 type SMSNotificationSender struct {
