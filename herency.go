@@ -14,14 +14,14 @@ type Profession struct {
 
 // Herency
 // Struct FullTime inherits from Profession and Person
-type FullTime struct {
+type FullTimeEmployee struct {
 	Person
 	Profession
 	endDate string
 }
 
 // Struct Temporary inherits from Profession and Person
-type Temporary struct {
+type TemporaryEmployee struct {
 	Person
 	Profession
 	taxRate int
@@ -34,24 +34,25 @@ type PrintInfo interface {
 
 // Methods needed for interfaces
 // Method for FullTime
-func (FullTime) getMessage() string {
-	return "This person works full time"
+func (FullTimeEmployee) getMessage() string {
+	return "This person works full time employee"
 }
 
 // Method for Temporary
-func (Temporary) getMessage() string {
-	return "This person works temporary"
+func (TemporaryEmployee) getMessage() string {
+	return "This person works temporary employee"
 }
 
 // Function to create new teacher without pointers
-func NewTeacher(id int, name string, age int) {
-	t := Teacher{}
+func NewFullTimeEmployee(id int, name string, age int, endDate string) {
+	t := FullTimeEmployee{}
 	t.id = id
 	t.name = name
 	t.age = age
+	t.endDate = endDate
 	fmt.Printf("%v\n", t)
 }
 
 func main() {
-	NewTeacher(1, "Christian", 24)
+	NewFullTimeEmployee(1, "Christian", 24, "25/12")
 }
