@@ -72,3 +72,16 @@ func getNotificationFactory(notificationType string) (IntNotificationFactory, er
 	}
 	return nil, fmt.Errorf("No Notification Type")
 }
+
+//
+func sendNotification(f IntNotificationFactory) {
+	f.SendNotification()
+}
+
+func getMethod(f IntNotificationFactory) {
+	fmt.Println(f.GetSender().GetSenderMethod())
+}
+
+func main() {
+
+}
