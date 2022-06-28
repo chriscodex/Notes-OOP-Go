@@ -82,6 +82,7 @@ func getMethod(f IntNotificationFactory) {
 	fmt.Println(f.GetSender().GetSenderMethod())
 }
 
+// Function Main
 func main() {
 	sms, _ := getNotificationFactory("SMS")
 	email, _ := getNotificationFactory("Email")
