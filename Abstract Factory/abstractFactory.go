@@ -62,7 +62,7 @@ func (EmailNotificationSender) GetSenderChannel() string {
 	return "Gmail"
 }
 
-//
+// Function of get notifications
 func getNotificationFactory(notificationType string) (IntNotificationFactory, error) {
 	if notificationType == "SMS" {
 		return &SMSNotification{}, nil
@@ -73,7 +73,7 @@ func getNotificationFactory(notificationType string) (IntNotificationFactory, er
 	return nil, fmt.Errorf("No Notification Type")
 }
 
-//
+// Function of send notifications
 func sendNotification(f IntNotificationFactory) {
 	f.SendNotification()
 }
