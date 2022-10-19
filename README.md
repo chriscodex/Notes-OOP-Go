@@ -1,4 +1,4 @@
-# OOP-with-Go
+# Notes-OOP-Go
 :heavy_check_mark: Implementing the object oriented programming paradigm in a program using the GO language. <br>
 :heavy_check_mark: Implementing the abstract factory design pattern.
 <br>
